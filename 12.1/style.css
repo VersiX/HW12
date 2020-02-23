@@ -1,0 +1,145 @@
+@font-face{
+    font-family: Pacifico;
+    src: url(fonts/Pacifico-Regular.ttf);
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url(fonts/Raleway-Light.ttf);
+}
+
+@font-face{
+    font-family: Raleway;
+    src: url(fonts/Raleway-Bold.ttf);
+    font-weight: bold;
+}
+
+body{
+    margin: 0;
+}
+
+footer{
+    background-image: url(img/bg.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 90px;
+    font-family: "Raleway";
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+    text-align: center;
+    margin: 40px;
+}
+
+.sub-title {
+    font-size: 17px;
+    font-family: "Raleway";
+    color: rgb(38, 38, 38);
+    text-align: center;
+    width: 350px;
+}
+
+.form-container {
+    margin: 46px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-info__title{
+    width: 500px;
+    font-size: 17px;
+    font-family: "Raleway";
+    color: rgb(38, 38, 38);
+    font-weight: bold;
+}
+
+.contact-info__data{
+    width: 500px;
+    font-size: 20px;
+    font-family: "Raleway";
+    color: rgb(38, 38, 38);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input{
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Raleway";
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 196, 196, 0.502);
+    width: 500px;
+    height: 50px;
+    border: none;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+.form__input-big{
+    height: 250px;
+    resize: none;
+}
+
+.form__input:focus{
+    opacity: 1;
+    border-left: solid 5px #355b82;
+
+}
+
+
+
+
+
+
+
+
+
+.footer-footer{
+    background-color: #262626;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*position: absolute;
+    bottom: 0;*/
+    width: 100%;
+    height: 90px;
+}
+
+.footer-footer__copyright{
+    font-size: 16px;
+    font-family: "Raleway";
+    color: rgb(185, 185, 185);
+}
+  
+.footer-footer__logo {
+    font-size: 25px;
+    font-family: "Pacifico";
+    color: rgb(185, 185, 185);
+}
+
+.footer-footer__with-love {
+    font-size: 15px;
+    font-family: "Raleway";
+    color: rgb(185, 185, 185);
+}
+
+.love-red {
+    color: #ff2b58;
+    font-weight: bold;
+}
+  
