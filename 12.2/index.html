@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+
+        <div class="inner-container">
+            <div class="tab-btn-container">
+                <button class="tab-btn  " id="btn-sign-in" onclick="openTab(event, 'tab-sign-in')">
+                    Sign in
+                </button>
+                <button class="tab-btn" id="btn-join-us" onclick="openTab(event, 'tab-join-us')">
+                    Join us
+                </button>
+
+            </div>
+
+
+            <form action="" class="form-menu" id="tab-sign-in">
+                <label for="sign-in-usr" class="label-for-txt">Username</label>
+                <input type="text" name="username" id="sign-in-usr" class="form-menu__input-txt">
+
+                <label for="sign-in-psw" class="label-for-txt">Password</label>
+                <input type="password" name="password" id="sign-in-psw" class="form-menu__input-txt">
+
+                <div class="checkbox-container">
+                    <input type="checkbox" name="remember" id="remember" class="form-menu__checkbox">
+                    <label for="remember" class="label-for-checkbox">
+                        <span class="form__checkbox">&#10004;</span>
+                        Keep me signed in</label>
+                </div>
+
+                <input type="submit" value="Sign in" class="form__submit">
+
+                <div class="additional-links">
+                    <a href="" class="help-link">
+                        Forgot password
+                    </a>
+                    <a href="" class="help-link">
+                        Create an account
+                    </a>
+                </div>
+            </form>
+
+            <form action="" class="form-menu" id="tab-join-us">
+                <label for="join-us-usr" class="label-for-txt">Username</label>
+                <input type="text" name="username" id="join-us-usr" class="form-menu__input-txt">
+
+                <label for="join-us-psw" class="label-for-txt">Password</label>
+                <input type="password" name="password" id="join-us-psw" class="form-menu__input-txt">
+
+                <label for="join-us-psw" class="label-for-txt">Repeat Password</label>
+                <input type="password" name="password" id="join-us-psw-repeat" class="form-menu__input-txt">
+                <input type="submit" value="Join us" class="form__submit form__submit-less-margin">
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+
+            tabcontent = document.getElementsByClassName("form-menu");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tab-btn");
+
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" tab-btn__active", "");
+            }
+
+
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " tab-btn__active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it 
+        document.getElementById("btn-sign-in").click();
+
+
+        var password = document.getElementById("join-us-psw")
+            , confirm_password = document.getElementById("join-us-psw-repeat");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Passwords Don't Match");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./plugins/jquery.mask.min.js"></script>
+
+</body>
+
+</html>

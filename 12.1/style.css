@@ -88,6 +88,7 @@ form{
     border: none;
     margin-bottom: 15px;
     padding: 20px;
+    border-left: solid 0px #355b82;
 }
 
 .form__input-big{
@@ -98,7 +99,7 @@ form{
 .form__input:focus{
     opacity: 1;
     border-left: solid 5px #355b82;
-
+    transition: all 0.1s ease-in-out;
 }
 
 
